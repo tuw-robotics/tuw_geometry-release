@@ -21,6 +21,7 @@ add_library(${PROJECT_NAME} SHARED
   src/${PROJECT_NAME}/point2d.cpp
   src/${PROJECT_NAME}/polar2d.cpp
   src/${PROJECT_NAME}/pose2d.cpp
+  src/${PROJECT_NAME}/sample2d.cpp
   src/${PROJECT_NAME}/line2d.cpp
   src/${PROJECT_NAME}/command.cpp
   src/${PROJECT_NAME}/linesegment2d.cpp
@@ -69,7 +70,7 @@ install(
   DESTINATION include
 )
 install(
-  TARGETS tuw_geometry 
+  TARGETS tuw_geometry
   EXPORT export_${PROJECT_NAME}
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
