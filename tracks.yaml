@@ -71,7 +71,7 @@ tracks:
     release_inc: '2'
     release_repo_url: null
     release_tag: :{version}
-    ros_distro: rolling
+    ros_distro: foxy
     vcs_type: git
     vcs_uri: https://github.com/tuw-robotics/tuw_geometry.git
     version: :{auto}
