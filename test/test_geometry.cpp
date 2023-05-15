@@ -39,7 +39,43 @@ TEST(Point2D, TestDistanceTo)
   tuw::Point2D p2(1.0, 1.0);
   ASSERT_EQ(1, p0.distanceTo(p1));
   EXPECT_NEAR(1.41421, p0.distanceTo(p2), 0.001);
+
+  cv::Point_<double> & p0_cv = p0.cv();
+  cv::Point_<double> & p1_cv = p1.cv();
+
+  double d = p1_cv.x - p0_cv.x;
+  ASSERT_EQ(1.0, d);
 }
+TEST(Point2D, CastToCVPoint)
+{
+  tuw::Point2D p0(0.0, 0.0);
+  tuw::Point2D p1(1.0, 0.0);
+
+  cv::Point_<double> & p0_cv = p0.cv();
+  cv::Point_<double> & p1_cv = p1.cv();
+
+  double dx = p1_cv.x - p0_cv.x;
+  double dy = p1_cv.y - p0_cv.y;
+  ASSERT_EQ(1.0, dx);
+  ASSERT_EQ(0.0, dy);
+}
+
+TEST(StampedData, TestCompare)
+{
+  using namespace std::chrono_literals;
+  auto t = std::chrono::steady_clock::now();
+  tuw::StampedData<tuw::Point2D> p0(tuw::Point2D(0.0, 0.0));
+  p0.stamp = t;
+  tuw::StampedData<tuw::Point2D> p1(tuw::Point2D(1.0, 0.0));
+  p1.stamp = t + 1ms;
+  tuw::StampedData<tuw::Point2D> p2(tuw::Point2D(1.0, 1.0));
+  p2.stamp = t;
+  ASSERT_NE(p0, p1);
+  ASSERT_EQ(p0, p2);
+  ASSERT_TRUE(p0 < p1);
+  ASSERT_TRUE(p1 > p0);
+}
+
 
 int main(int argc, char ** argv)
 {
