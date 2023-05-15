@@ -2,6 +2,18 @@
 Changelog for package tuw_geometry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.9 (2023-05-15)
+------------------
+* connand2d files added
+* Contributors: Markus Bader
+
+0.0.8 (2023-03-30)
+------------------
+* command to command2d
+* sample2d removed
+* sample template added
+* Contributors: Markus Bader
+
 0.0.7 (2023-03-26)
 ------------------
 * lint_cmake error fixed
