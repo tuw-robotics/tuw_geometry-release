@@ -1,27 +1,27 @@
-#ifndef TUW_GEOMETRY__COMMAND_HPP
-#define TUW_GEOMETRY__COMMAND_HPP
+#ifndef TUW_GEOMETRY__COMMAND2D_HPP
+#define TUW_GEOMETRY__COMMAND2D_HPP
 
 #include <memory>
 #include <opencv2/core/core.hpp>
 
 namespace tuw
 {
-class Command;   /// Prototype
-using CommandPtr = std::shared_ptr<Command>;
-using CommandConstPtr = std::shared_ptr<Command const>;
+class Command2D;   /// Prototype
+using Command2DPtr = std::shared_ptr<Command2D>;
+using Command2DConstPtr = std::shared_ptr<Command2D const>;
 
 /**
  * class to handle motion control commands
  **/
-class Command : public cv::Vec<double, 2>
+class Command2D : public cv::Vec<double, 2>
 {
 public:
   /// constructor
-  Command();
+  Command2D();
   /// constructor
-  Command(double v, double w);
+  Command2D(double v, double w);
   /// copy constructor
-  Command(const Command & o);
+  Command2D(const Command2D & o);
 
   /**
      * Stream extraction
@@ -29,7 +29,7 @@ public:
      * @param o object
      * @return stream
      **/
-  friend std::ostream & operator<<(std::ostream & os, const Command & o);
+  friend std::ostream & operator<<(std::ostream & os, const Command2D & o);
 
   /**
      * @return linear velocity
@@ -58,5 +58,5 @@ public:
 };
 }  // namespace tuw
 
-std::ostream & operator<<(std::ostream & os, const tuw::Command & o);
-#endif  //TUW_GEOMETRY__COMMAND_HPP
+std::ostream & operator<<(std::ostream & os, const tuw::Command2D & o);
+#endif  //TUW_GEOMETRY__COMMAND2D_HPP
