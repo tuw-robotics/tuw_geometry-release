@@ -1,3 +1,26 @@
+## tuw_geometry (humble) - 0.1.1-1
+
+The packages in the `tuw_geometry` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble tuw_geometry` on `Sun, 25 Jun 2023 09:59:54 -0000`
+
+The `tuw_geometry` package was released.
+
+Version of package(s) in repository `tuw_geometry`:
+
+- upstream repository: https://github.com/tuw-robotics/tuw_geometry.git
+- release repository: https://github.com/tuw-robotics/tuw_geometry-release.git
+- rosdistro version: `0.0.9-1`
+- old version: `0.0.9-2`
+- new version: `0.1.1-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## tuw_geometry (humble) - 0.0.9-2
 
 The packages in the `tuw_geometry` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble tuw_geometry` on `Sun, 25 Jun 2023 09:11:57 -0000`
